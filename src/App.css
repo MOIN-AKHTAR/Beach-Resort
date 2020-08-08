@@ -26,7 +26,7 @@ body{
 }
 
 h1{
-  font-size: 4em;
+  font-size: 2.5em;
   margin-bottom: 0.4em;
 }
 h2{
@@ -115,7 +115,9 @@ h6{
     margin: 0 1rem;
     padding: 0.5rem 0;
   }
- 
+  h1{
+    font-size: 4em;
+  }
 }
 /* End Of Navbar */
 /* Top Of Page With Background Image And Centered Box- */
@@ -238,25 +240,26 @@ h6{
   cursor: pointer;
   position: relative;
   box-shadow: 2px 8px 2px rgba(0,0,0,0.5);
+  transition: var(--mainTransition);
 }
 .price{
   position: absolute;
   top: 0;
   left:0;
-  padding: 10px 20px;
+  padding: 2px 20px;
   display: inline-block;
   background: rgba(0,0,0,0.8);
   color: var(--mainWhite);
   border-radius: 0 0 10px 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   
 }
 .rooms img{
   width: 100%;
 }
 .rooms p{
-  padding: 5px 0px;
-  font-size: 1.2em;
+  padding: 2px 0px;
+  font-size: 1em;
   text-transform: capitalize;
 }
 .hidden-section{
@@ -283,3 +286,13 @@ h6{
   background: rgba(0,0,0,0.5);
 }
 /* End Of Featured Rooms*/
+
+/* Error */
+.error{
+  text-align: center;
+  color: brown;
+  font-size: .5em;
+  letter-spacing: var(--mainSpacing);
+  margin: 20px 0;
+}
+/* End Of Error */

@@ -11,6 +11,8 @@ const Consumer=myContext.Consumer;
         sortedRooms:[],
         loading:true
     }
+
+    getRoom=slug=>this.state.rooms.find(room=>room.slug===slug)
     
     componentDidMount(){
        const newRooms=[...Rooms];
@@ -41,7 +43,8 @@ const Consumer=myContext.Consumer;
         return (
             <myContext.Provider
             value={{
-                ...this.state
+                ...this.state,
+                getRoom:this.getRoom
             }}
             >
                 {this.props.children}
