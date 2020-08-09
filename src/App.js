@@ -4,7 +4,8 @@ import {Switch,Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Room from './pages/Room';
-import NotFound from './pages/NotFound'
+import NotFound from './pages/NotFound';
+import Rooms from './pages/Rooms'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/"  component={Home}/>
+        <Route path="/rooms" component={Rooms}/>
         <Route path="/room/:slug" component={Room}/>
         <Route path="*" component={NotFound}/>
       </Switch>

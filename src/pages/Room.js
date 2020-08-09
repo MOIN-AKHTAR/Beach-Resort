@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import {myContext} from '../Context'
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
-import Styled from 'styled-components'
+import {CustomHero} from '../components/CustomHero'
+
 
 export default function Room(props) {
     const {getRoom}=useContext(myContext);
@@ -23,7 +24,6 @@ export default function Room(props) {
     else{
       const {images:[firstImage,...otherImages],name,description,price,size,capacity,
       pets,breakfast,extras}=Room;
-      console.log(Room)
     return (
         <React.Fragment>
         <CustomHero img={firstImage}>
@@ -59,10 +59,4 @@ export default function Room(props) {
 }
 
 
-const CustomHero=Styled.div`
-min-height: 60vh;
-background: url(${props=>props.img}) center/cover no-repeat;
-display: flex;
-justify-content: center;
-align-items: center;
-`
+

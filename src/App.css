@@ -344,5 +344,37 @@ h6{
    margin:60px auto;
    list-style: none;
 }
-
 /* Single Rooms Section End */
+/* Search Room Section */
+.search-room-section{
+  margin-top: 60px;
+}
+.search-room-form{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+  max-width: 1100px;
+  width:95%;
+  gap: 25px;
+  margin: 50px auto;
+  line-height: 25px;
+}
+.form-group{
+  text-transform: capitalize;
+}
+.form-group label{
+display: block;
+}
+.form-group select,input[type="range"]{
+  width: 100%;
+}
+input[type="number"]{
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--mainBlack);
+  padding: 0 5px;
+  font-size: 16px;
+}
+.checkbox{
+  display: block;
+}
+/* End Search Room Section */
