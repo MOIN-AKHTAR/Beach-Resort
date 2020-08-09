@@ -7,7 +7,7 @@ export default function NotFound() {
     <div className="defaultTop">
           <Hero
           title="404"
-          subtitle="Not Found :("
+          subtitle="Such Path Not Found"
           >
             <Link to="/">
             <button className="btn-primary">back to home</button>

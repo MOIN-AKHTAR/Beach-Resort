@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import {myContext} from '../Context'
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
+import Styled from 'styled-components'
 
 export default function Room(props) {
     const {getRoom}=useContext(myContext);
@@ -19,9 +20,49 @@ export default function Room(props) {
          </div>
        )
     }
+    else{
+      const {images:[firstImage,...otherImages],name,description,price,size,capacity,
+      pets,breakfast,extras}=Room;
+      console.log(Room)
     return (
-        <div>
-           FOUND
-        </div>
+        <React.Fragment>
+        <CustomHero img={firstImage}>
+        <Hero
+          title={name}
+          >
+             <button className="btn-primary">our rooms</button>
+          </Hero>
+        </CustomHero>
+        <section className="images-section">
+         {otherImages.map((image,index)=><img src={image} alt="Image" aria-hidden key={index}/>)}
+        </section>
+        <section className="information-section">
+          <div className="description">
+            <h3>Details</h3>
+             <p>{description}</p>
+          </div>
+          <div className="info">
+          <h3>Info</h3>
+          <p>Price: ${price}</p>
+          <p>Size: ${size} SQFT</p>
+          <p>Max Capacity: {capacity} {capacity>1?"People":"Person"}</p>
+          <p>Pets: {pets?"Allowed":"Not Allowed"}</p>
+          <p>{breakfast?"Free Breakfast Included":null}</p>
+          </div>
+        </section>
+        <ul className="extras">
+          {extras.map((extra,index)=><li key={index}>- {extra}</li>)}
+        </ul>
+        </React.Fragment>
     )
+    }
 }
+
+
+const CustomHero=Styled.div`
+min-height: 60vh;
+background: url(${props=>props.img}) center/cover no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+`
