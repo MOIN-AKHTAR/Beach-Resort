@@ -30,7 +30,9 @@ export default function Room(props) {
         <Hero
           title={name}
           >
+             <Link to="/rooms">
              <button className="btn-primary">our rooms</button>
+             </Link>
           </Hero>
         </CustomHero>
         <section className="images-section">

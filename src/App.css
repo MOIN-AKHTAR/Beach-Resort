@@ -239,6 +239,7 @@ h6{
   grid-gap: 40px;
   text-align: center;
 }
+
 .rooms section{
   background: var(--mainGrey);
   cursor: pointer;
@@ -255,8 +256,6 @@ h6{
   background: rgba(0,0,0,0.8);
   color: var(--mainWhite);
   border-radius: 0 0 10px 0;
-  /* font-weight: bold; */
-  
 }
 .rooms img{
   width: 100%;
@@ -289,6 +288,7 @@ h6{
   align-items: center;
   background: rgba(0,0,0,0.5);
 }
+
 /* End Of Featured Rooms*/
 
 /* Error */
@@ -358,6 +358,12 @@ h6{
   margin: 50px auto;
   line-height: 25px;
 }
+@media screen and (max-width: 500px){
+  .search-room-form{
+    grid-template-columns: 1fr;
+    width:80%;
+  }
+}
 .form-group{
   text-transform: capitalize;
 }
@@ -368,10 +374,11 @@ display: block;
   width: 100%;
 }
 input[type="number"]{
-  margin: 0 5px;
   border-radius: 5px;
+  width:30%;
   border: 1px solid var(--mainBlack);
-  padding: 0 5px;
+  padding: 0 2px;
+  margin: 0 5px;
   font-size: 16px;
 }
 .checkbox{
